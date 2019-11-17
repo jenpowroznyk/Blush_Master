@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/GrassFlow/Example Scenes/GrassFieldDeferred.unity
+  isLoaded: 1
+  isActive: 1
