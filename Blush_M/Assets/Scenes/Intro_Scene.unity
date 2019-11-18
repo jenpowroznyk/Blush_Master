@@ -463,7 +463,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &1471177491
 MonoBehaviour:
@@ -488,6 +488,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471177487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c842470b4554cc7469145a7f15f4edb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ed1d10807b79924b9a32d61bbe4d36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

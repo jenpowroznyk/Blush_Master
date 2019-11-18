@@ -7,16 +7,18 @@ public class Movement : MonoBehaviour
 
 
     Rigidbody rb;
+   
 
     public int speed;
     public int jumpImpulse;
 
+
     bool canJump = true;
 
     void Start()
-    {
-        
+    {        
         rb = this.GetComponent<Rigidbody>();
+       
     }
 
     // Update is called once per frame
@@ -25,38 +27,47 @@ public class Movement : MonoBehaviour
         int xValue = 0;
         int zValue = 0;
         bool keyDown = false;
+        
 
         if (Input.GetKey(KeyCode.W))
         {
             zValue = 1;
             keyDown = true;
+                
         }
+     
 
         if (Input.GetKey(KeyCode.A))
         {
             xValue = -1;
             keyDown = true;
+          
         }
+        
 
         if (Input.GetKey(KeyCode.S))
         {
             zValue = -1;
             keyDown = true;
+          
         }
+      
 
         if (Input.GetKey(KeyCode.D))
         {
             xValue = 1;
             keyDown = true;
+           
         }
-
+     
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             Vector3 jumpVector = new Vector3(0, jumpImpulse, 0);
             rb.velocity += jumpVector;
             canJump = false;
-
+            
         }
+   
 
         if (keyDown)
         {
