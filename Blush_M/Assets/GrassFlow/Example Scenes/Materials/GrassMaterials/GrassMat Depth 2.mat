@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: GrassMat Depth 2
-  m_Shader: {fileID: 4800000, guid: 670f904d8dba2d64da2a16b58b02b5e0, type: 3}
-  m_ShaderKeywords: BILLBOARD GRASS_EDITOR RENDERMODE_TERRAIN UNITY_EDITOR _RENDERMODE_TERRAIN
-    _USE_MESH
+  m_Shader: {fileID: 4800000, guid: 958b9cc04b121c443b428e3413ab8ff7, type: 3}
+  m_ShaderKeywords: BILLBOARD GRASS_EDITOR RENDERMODE_MESH RENDERMODE_TERRAIN UNITY_EDITOR
+    _RENDERMODE_TERRAIN _USE_MESH
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -61,11 +61,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - colorMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 93637f1cd5963f240a3569f3f99be2f9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - dhfParamMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6ad529de9ae702548b0c67e4939a00d8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - terrainNormalMap:
@@ -81,6 +81,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 89.73
+    - _Gloss: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -100,7 +101,7 @@ Material:
     - alphaClip: 0
     - ambientCO: 0.4
     - ambientCOShadow: 0.5
-    - bladeHeight: 20
+    - bladeHeight: 9.08
     - bladeSharp: 0.3
     - bladeWidth: 0.05
     - cellSize: 0.05
@@ -113,12 +114,13 @@ Material:
     - noiseSpeed: 2
     - numTextures: 1
     - seekSun: 1
+    - specularMult: 0.8
     - variance: 0.3
     - widthLODscale: 0.04
     m_Colors:
     - _Color: {r: 0.57363087, g: 0.74264705, b: 0.38224483, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LOD: {r: 26, g: 2.5, b: -0.005, a: 0}
+    - _LOD: {r: 15, g: 1.1, b: 0, a: 0}
     - _noiseScale: {r: 1, g: 1, b: 0.7, a: 0}
     - _noiseSpeed: {r: 1.5, g: 1, b: 0.35, a: 0}
     - noiseScale: {r: 1, g: 1, b: 0.5, a: 0}
@@ -127,4 +129,4 @@ Material:
     - variance: {r: 0.5, g: 0.2, b: 0.6, a: 0.65}
     - windDir: {r: -0.7, g: -0.6, b: 0.1, a: 0}
     - windDir2: {r: 0.5, g: 0.5, b: 1.2, a: 1}
-    - windTint: {r: 1, g: 1, b: 1, a: 0.05}
+    - windTint: {r: 0.78277457, g: 0, b: 0.9056604, a: 0.05}
