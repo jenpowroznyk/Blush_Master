@@ -10,14 +10,17 @@ public class Movement : MonoBehaviour
    
 
     public int speed;
+    public int originalSpeed;
     public int jumpImpulse;
 
 
     bool canJump = true;
+    
 
     void Start()
     {        
         rb = this.GetComponent<Rigidbody>();
+        originalSpeed = speed;
        
     }
 
@@ -58,8 +61,9 @@ public class Movement : MonoBehaviour
             xValue = 1;
             keyDown = true;
            
+           
         }
-     
+        
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             Vector3 jumpVector = new Vector3(0, jumpImpulse, 0);
@@ -67,7 +71,13 @@ public class Movement : MonoBehaviour
             canJump = false;
             
         }
-   
+
+       // if (Input.anyKey == false)
+        //{
+            // rb.velocity = new Vector3(0, 0, 0);
+           
+        //}
+
 
         if (keyDown)
         {
@@ -80,6 +90,8 @@ public class Movement : MonoBehaviour
             //rb.velocity += velocity;
 
         }
+
+
 
         Vector3 velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
         rb.velocity += velocity;

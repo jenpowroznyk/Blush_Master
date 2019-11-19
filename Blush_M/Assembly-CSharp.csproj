@@ -71,6 +71,7 @@
     <Compile Include="Assets\Huge Mocap Library\demo\scripts\smoothFollow.cs" />
     <Compile Include="Assets\Idle MoCap\DemoScene\idle_mocap_follow_player.cs" />
     <Compile Include="Assets\JensScripts\AnimController.cs" />
+    <Compile Include="Assets\JensScripts\FaceDirection.cs" />
     <Compile Include="Assets\JensScripts\Movement.cs" />
     <Compile Include="Assets\RPG Character Animation Pack FREE\Code\CameraController.cs" />
     <Compile Include="Assets\RPG Character Animation Pack FREE\Code\GUIControlsFREE.cs" />

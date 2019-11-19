@@ -6,11 +6,13 @@ public class AnimController : MonoBehaviour
 {
     private Animator anim;
 
+
     private float w;
 
     // Start is called before the first frame update
     void Start()
     {
+       
         anim = GetComponent<Animator>();
         w = 0;
     }
