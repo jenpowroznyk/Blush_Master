@@ -12,6 +12,9 @@ public class Movement : MonoBehaviour
     public int speed;
     public int originalSpeed;
     public int jumpImpulse;
+    private int originalJumpImpulse;
+
+    public int lilyForce;
 
 
     bool canJump = true;
@@ -21,7 +24,9 @@ public class Movement : MonoBehaviour
     {        
         rb = this.GetComponent<Rigidbody>();
         originalSpeed = speed;
-       
+        originalJumpImpulse = jumpImpulse;
+
+
     }
 
     // Update is called once per frame
@@ -102,6 +107,21 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
+            canJump = true;
+        }
+
+        if (collision.gameObject.tag == "Lilly")
+        {
+            jumpImpulse = jumpImpulse + lilyForce / 4;
+            canJump = true;   
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Lilly")
+        {
+            jumpImpulse = originalJumpImpulse;
             canJump = true;
         }
     }
