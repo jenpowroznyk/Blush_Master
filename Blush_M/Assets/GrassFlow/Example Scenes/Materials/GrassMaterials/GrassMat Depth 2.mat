@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: GrassMat Depth 2
-  m_Shader: {fileID: 4800000, guid: 958b9cc04b121c443b428e3413ab8ff7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 670f904d8dba2d64da2a16b58b02b5e0, type: 3}
   m_ShaderKeywords: BILLBOARD GRASS_EDITOR RENDERMODE_MESH RENDERMODE_TERRAIN UNITY_EDITOR
     _RENDERMODE_TERRAIN _USE_MESH
   m_LightmapFlags: 4
@@ -101,12 +101,12 @@ Material:
     - alphaClip: 0
     - ambientCO: 0.4
     - ambientCOShadow: 0.5
-    - bladeHeight: 9.08
+    - bladeHeight: 6.75
     - bladeSharp: 0.3
     - bladeWidth: 0.05
     - cellSize: 0.05
     - edgeLight: 0.4
-    - edgeLightSharp: 8
+    - edgeLightSharp: 4.46
     - falloff: 0.45
     - grassFade: 135
     - grassFadeSharpness: 10
