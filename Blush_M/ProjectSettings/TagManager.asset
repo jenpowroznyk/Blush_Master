@@ -9,6 +9,8 @@ TagManager:
   - Dead
   - Water
   - Lilly
+  - Fire
+  - Boid
   layers:
   - Default
   - TransparentFX
