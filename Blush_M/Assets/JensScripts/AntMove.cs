@@ -20,7 +20,7 @@ public class AntMove : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log("Hit and object named " + collision.gameObject.name);
+      
 
         if (collision.gameObject.tag == "AntTrigRight")
         {

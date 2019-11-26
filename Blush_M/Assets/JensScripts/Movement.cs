@@ -15,6 +15,9 @@ public class Movement : MonoBehaviour
     public int maxSpeed;
     private int originalJumpImpulse;
 
+    //private Vector3 mirrorVel;
+           
+
     public int lilyForce;
 
 
@@ -36,7 +39,9 @@ public class Movement : MonoBehaviour
         int xValue = 0;
         int zValue = 0;
         bool keyDown = false;
+       
 
+        float rbMag = rb.velocity.magnitude;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -85,21 +90,26 @@ public class Movement : MonoBehaviour
         //}
 
 
-        if (keyDown)
+      
+
+    
+
+        if (!Input.anyKey)
         {
-            //Vector3 velocity = new Vector3(xValue * speed * Time.deltaTime, 0, zValue * speed * Time.deltaTime);
+            
+            xValue = 0;
+            zValue = 0;
 
-            //rb.AddForce(velocity, ForceMode.VelocityChange);
 
-
-            //Vector3 velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
-            //rb.velocity += velocity;
+             
 
         }
 
 
-       
-            Vector3 velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
+
+
+        Vector3 velocity = new Vector3(xValue * speed * Time.deltaTime, 0, zValue * speed * Time.deltaTime);
+         
             rb.velocity += velocity;
         
         
@@ -110,6 +120,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
+            Debug.Log("grounded");
             canJump = true;
         }
 

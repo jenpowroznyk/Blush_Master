@@ -101,9 +101,9 @@ Material:
     - alphaClip: 0
     - ambientCO: 0.4
     - ambientCOShadow: 0.5
-    - bladeHeight: 2.9
+    - bladeHeight: 2.93
     - bladeSharp: 0.23
-    - bladeWidth: 0.07
+    - bladeWidth: -0.23
     - cellSize: 0.05
     - edgeLight: 0.4
     - edgeLightSharp: 4.46
