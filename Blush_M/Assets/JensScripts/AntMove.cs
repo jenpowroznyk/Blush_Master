@@ -5,19 +5,36 @@ using UnityEngine;
 public class AntMove : MonoBehaviour
 {
 
-	public GameObject ant;
-	private Transform antBod;
-	
-    // Start is called before the first frame update
+    public static int movespeed = 1;
+    public Vector3 userDirection = Vector3.right;
+
     void Start()
     {
-		antBod = ant.GetComponent<Transform>();
-
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-		
+        transform.Translate(userDirection * movespeed * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        Debug.Log("Hit and object named " + collision.gameObject.name);
+
+        if (collision.gameObject.tag == "AntTrigRight")
+        {
+            userDirection = new Vector3(0, 0, 5);
+
+           
+        }
+
+        if (collision.gameObject.tag == "AntTrigLeft")
+        {
+            userDirection = new Vector3(0, 0, -5);
+
+           
+        }
+
     }
 }

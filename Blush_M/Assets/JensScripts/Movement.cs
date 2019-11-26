@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     public int speed;
     public int originalSpeed;
     public int jumpImpulse;
+    public int maxSpeed;
     private int originalJumpImpulse;
 
     public int lilyForce;
@@ -35,52 +36,52 @@ public class Movement : MonoBehaviour
         int xValue = 0;
         int zValue = 0;
         bool keyDown = false;
-        
+
 
         if (Input.GetKey(KeyCode.W))
         {
             zValue = 1;
             keyDown = true;
-                
+
         }
-     
+
 
         if (Input.GetKey(KeyCode.A))
         {
             xValue = -1;
             keyDown = true;
-          
+
         }
-        
+
 
         if (Input.GetKey(KeyCode.S))
         {
             zValue = -1;
             keyDown = true;
-          
+
         }
-      
+
 
         if (Input.GetKey(KeyCode.D))
         {
             xValue = 1;
             keyDown = true;
-           
-           
+
+
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             Vector3 jumpVector = new Vector3(0, jumpImpulse, 0);
             rb.velocity += jumpVector;
             canJump = false;
-            
+
         }
 
-       // if (Input.anyKey == false)
+        // if (Input.anyKey == false)
         //{
-            // rb.velocity = new Vector3(0, 0, 0);
-           
+        // rb.velocity = new Vector3(0, 0, 0);
+
         //}
 
 
@@ -97,9 +98,11 @@ public class Movement : MonoBehaviour
         }
 
 
-
-        Vector3 velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
-        rb.velocity += velocity;
+       
+            Vector3 velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
+            rb.velocity += velocity;
+        
+        
     }
 
 

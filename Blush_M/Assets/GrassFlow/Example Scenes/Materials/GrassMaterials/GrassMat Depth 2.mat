@@ -101,9 +101,9 @@ Material:
     - alphaClip: 0
     - ambientCO: 0.4
     - ambientCOShadow: 0.5
-    - bladeHeight: 6.75
-    - bladeSharp: 0.3
-    - bladeWidth: 0.05
+    - bladeHeight: 2.9
+    - bladeSharp: 0.23
+    - bladeWidth: 0.07
     - cellSize: 0.05
     - edgeLight: 0.4
     - edgeLightSharp: 4.46
@@ -113,7 +113,7 @@ Material:
     - noiseScale: 0.08
     - noiseSpeed: 2
     - numTextures: 1
-    - seekSun: 1
+    - seekSun: 0.92
     - specularMult: 0.8
     - variance: 0.3
     - widthLODscale: 0.04
@@ -126,7 +126,7 @@ Material:
     - noiseScale: {r: 1, g: 1, b: 0.5, a: 0}
     - terrainChunkSize: {r: 25, g: 25, b: 0, a: 0}
     - terrainSize: {r: 250, g: 600, b: 250, a: 0}
-    - variance: {r: 0.5, g: 0.2, b: 0.6, a: 0.65}
+    - variance: {r: 1.28, g: 0.91, b: 0.6, a: 0.41}
     - windDir: {r: -0.7, g: -0.6, b: 0.1, a: 0}
     - windDir2: {r: 0.5, g: 0.5, b: 1.2, a: 1}
     - windTint: {r: 0.78277457, g: 0, b: 0.9056604, a: 0.05}

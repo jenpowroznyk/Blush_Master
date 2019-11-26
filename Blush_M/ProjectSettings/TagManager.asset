@@ -11,6 +11,9 @@ TagManager:
   - Lilly
   - Fire
   - Boid
+  - AntTrig
+  - AntTrigRight
+  - AntTrigLeft
   layers:
   - Default
   - TransparentFX
