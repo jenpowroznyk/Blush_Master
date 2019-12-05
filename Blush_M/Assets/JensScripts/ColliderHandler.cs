@@ -9,6 +9,7 @@ public class ColliderHandler : MonoBehaviour
     public GameObject antCol;
     public GameObject antObj;
 
+
     void Start()
     {
         
@@ -18,7 +19,9 @@ public class ColliderHandler : MonoBehaviour
     {
         antCol.SetActive(true);
         antObj.SetActive(true);
-        Destroy(this.gameObject);
+        // Destroy(this.gameObject);
+
+        Instantiate(antObj, new Vector3(63, -14, 38), Quaternion.Euler(0, 90, 0));
     }
     // Update is called once per frame
     void Update()

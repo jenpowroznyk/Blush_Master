@@ -10,8 +10,11 @@ public class Death : MonoBehaviour
     private Transform charPos;
 
     public Transform spawnP;
+    public Transform spawnP2;
 
-  
+   // public GameObject ant;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,17 @@ public class Death : MonoBehaviour
             isDead = true;
             charPos.position = spawnP.position;
             
+        }
+
+        if (collision.gameObject.tag == "Dead")
+        {
+
+            isDead = true;
+            charPos.position = spawnP2.position;
+           
+
+            //Instantiate(ant, new Vector3(0, 0, 0), Quaternion.identity);
+
         }
 
     }

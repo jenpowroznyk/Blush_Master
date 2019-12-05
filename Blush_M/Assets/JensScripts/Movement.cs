@@ -111,8 +111,9 @@ public class Movement : MonoBehaviour
         Vector3 velocity = new Vector3(xValue * speed * Time.deltaTime, 0, zValue * speed * Time.deltaTime);
          
             rb.velocity += velocity;
-        
-        
+
+        if (Input.GetKeyDown("escape")) Application.Quit();
+
     }
 
 

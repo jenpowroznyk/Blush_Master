@@ -7,9 +7,15 @@ public class AntMove : MonoBehaviour
 
     public static int movespeed = 1;
     public Vector3 userDirection = Vector3.right;
+    private GameObject antTrans;
+
+
+
 
     void Start()
     {
+        antTrans = this.gameObject;
+    
     }
 
     public void Update()
@@ -31,10 +37,21 @@ public class AntMove : MonoBehaviour
 
         if (collision.gameObject.tag == "AntTrigLeft")
         {
-            userDirection = new Vector3(0, 0, -5);
-
+            //userDirection = new Vector3(0, 0, -5);        
+            Destroy(antTrans);
+            
            
         }
+
+
+        if (collision.gameObject.tag == "Bun")
+        {
+            userDirection = new Vector3(0, 0, -5);
+   
+
+
+        }
+
 
     }
 }
